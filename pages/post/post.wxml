@@ -13,7 +13,7 @@
          </view>
          <!-- <view class='zt-panel-border'></view> -->
          <view class='input-section'>
-            <textarea name="content" placeholder="描述一下该物品的外观、拾到/丢失地点、时间等（至多可输入300个字符）" maxlength="300" />
+            <textarea name="content" placeholder="描述一下该物品的外观、拾到/丢失地点,时间等（至多可输入300个字符）" maxlength="300" />
          </view>
          <!-- <view class='zt-panel-border'></view> -->
          <view class="section">
