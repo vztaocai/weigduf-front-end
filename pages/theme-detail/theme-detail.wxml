@@ -1,0 +1,80 @@
+<import src="../temp/return-home/return-home.wxml" />
+<view class="page">
+   <view class="page__bd_spacing">
+      <view class='zt-header'>
+         <view class='zt-user-box'>
+            <image wx:if="{{themeData.isAnonymous}}" src='../../imgs/icon/nickname.png' class="zt-user-avatar"></image>
+            <image wx:else mode='aspectFill' src='{{themeData.user.avatar_url}}' class="zt-user-avatar"></image>
+            <view class='zt-name-box'>
+               <view wx:if="{{themeData.isAnonymous}}" class="zt-user-name">匿名用户</view>
+               <view wx:else class="zt-user-name">{{themeData.user.nickname}}</view>
+               <view wx:if="{{themeData.user.title}}" class='zt-user-title'>{{themeData.user.title}}</view>
+            </view>
+         </view>
+         <view class='zt-user-date'>
+            {{themeData.create_time}}
+         </view>
+      </view>
+      <view class='zt-main'>
+         <text class='zt-content'>{{themeData.content}}</text>
+         <view class='zt-image-container'>
+            <block wx:for="{{themeData.img}}">
+               <image mode='widthFix' src='{{item.url}}' bindtap='preImage' data-src="{{item.url}}" data-imgs="{{themeData.img}}"></image>
+            </block>
+         </view>
+         <view class='zt-main-handle'>
+            <view class='zt-scan'>浏览 {{themeData.scan}}</view>
+            <view class="zt-like-box" >
+               <view bindtap='onClickLike' data-themeid="{{themeData.id}}">
+                  <image wx:if="{{themeData.isLike}}" src='../../imgs/icon/like@selected.png'></image>
+                  <image wx:else src='../../imgs/icon/like.png'></image>
+                  <view>{{themeData.like}}</view>
+               </view>
+
+               <button open-type='share' data-content="{{themeData.content}}" data-theme-id='{{themeData.id}}'>
+                  <image src='../../imgs/icon/fenxiang.png'></image>
+                  <view>分享</view>
+               </button>
+            </view>
+         </view>
+      </view>
+   </view>
+   <view class='zt-comment-container'>
+      <view class='zt-comment-title'>全部评论（{{themeData.comment_count}}）</view>
+      <block wx:for="{{themeData.comments}}">
+         <view class='zt-comment-box' bindtap="{{userId!=item.user_id?'onReply':''}}" data-to-nickname="{{item.nickname}}" data-to-user-id="{{item.user_id}}" data-id='{{themeData.id}}'>
+            <view class='zt-comment-header'>
+               <image src='{{item.avatar_url}}' class="zt-user-avatar"></image>
+               <view>{{item.nickname}}</view>
+            </view>
+            <view class='zt-comment-box-main'>
+               <text class='zt-comment-content'><text wx:if="{{item.to_user_id}}" class='zt-reply-label'>@{{item.to_user_nickname}} </text>{{item.comment}}</text>
+               <view class='zt-comment-footer'>
+                  <view class='zt-comment-time'>{{item.create_time}}</view>
+                  <view wx:if="{{userId!=item.user_id}}" class='zt-comment-reply'>
+                     <image src='../../imgs/icon/edit.png'></image>
+                  </view>
+                  <view wx:if="{{userId==item.user_id}}" class='zt-comment-time' bindtap='deleteComment' data-comment-id='{{item.id}}'>
+                     删除
+                  </view>
+               </view>
+            </view>
+            <view class='zt-comment-border'></view>
+         </view>
+      </block>
+   </view>
+
+   <view class='zt-post-comment-container'>
+      <view wx:if="{{replyData}}" class='cancel-reply' bindtap='cancelReply'>取消回复</view>
+      <form bindsubmit="formSubmit" data-id='{{themeData.id}}' report-submit="true">
+         <view class='section'>
+            <input id="{{isInputing?'inputing':''}}" name="comment" placeholder="{{replyData?'@'+replyData.toNickname:'请输入评论'}}" bindinput="watchInput" value="{{searchinput}}" />
+            <button class='zt-post-button' plain="true" formType="submit">
+               <image wx:if="{{isInputing}}" src='../../imgs/icon/post@selected.png'></image>
+               <image wx:else src='../../imgs/icon/post.png'></image>
+            </button>
+         </view>
+      </form>
+   </view>
+</view>
+<template is="return-home" />

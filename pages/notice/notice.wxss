@@ -1,0 +1,111 @@
+@import  '../temp/a-panel/a-panel.wxss';
+@import '../temp/post-button/post-button.wxss';
+
+
+
+.weui-tab {
+   position: relative;
+   height: 100%;
+}
+scroll-view{
+   height: 100vh;
+}
+.nomore{
+   margin-top: 20px;
+   text-align: center;
+   color: #989898;
+}
+.weui-tab__panel {
+   box-sizing: border-box;
+   height: 100%;
+   padding-top: 20px;
+   overflow: auto;
+   -webkit-overflow-scrolling: touch;
+}
+
+.weui-tab__content {
+   padding-top: 40px;
+   text-align: center;
+}
+
+.weui-navbar {
+   display: -webkit-box;
+   display: -webkit-flex;
+   display: flex;
+   position: absolute;
+   background-color: #ffffff;
+   color: #a09fed;
+   z-index: 500;
+   top: 0;
+   width: 100%;
+}
+
+.weui-navbar__item {
+   position: relative;
+   display: block;
+   -webkit-box-flex: 1;
+   -webkit-flex: 1;
+   flex: 1;
+   padding: 13px 0;
+   text-align: center;
+   font-size: 0;
+   z-index: 600;
+}
+
+.weui-navbar__item.weui-bar__item_on {
+   color: #fff;
+}
+
+.weui-navbar__slider {
+   position: absolute;
+   content: " ";
+   left: 0px;
+   bottom: 7px;
+   width: 6em;
+   height: 30px;
+   border-radius: 20px;
+   background-color: #a09fed;
+   -webkit-transition: -webkit-transform 0.3s;
+   transition: -webkit-transform 0.3s;
+   transition: transform 0.3s;
+   transition: transform 0.3s, -webkit-transform 0.3s;
+}
+
+.weui-navbar__title {
+   display: inline-block;
+   font-size: 15px;
+   max-width: 8em;
+   width: auto;
+   overflow: hidden;
+   text-overflow: ellipsis;
+   white-space: nowrap;
+   word-wrap: normal;
+}
+
+
+.zt-commenting-box{
+   display: flex;
+   height: 50px;
+   justify-content: center;
+}
+input{
+   border-bottom: 2px solid #a09fed;
+   width: 600rpx;
+   height: 30px;
+   margin: auto 0;
+   text-align: left;
+}
+.zt-commenting-button{
+   width: 100rpx;
+   height: 32px;
+   line-height: 30px;
+   border-radius: 2px;
+   padding: 0;
+   font-size: 16px;
+   margin: auto 0;
+   background-color: #a09fed;
+   color: #ffffff;
+}
+button[class="zt-commenting-button"]::after {
+  border: 0;
+} 

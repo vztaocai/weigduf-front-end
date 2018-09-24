@@ -1,0 +1,28 @@
+@import '../temp/post-button/post-button.wxss';
+
+.page__bd_spacing{
+   padding-top: 10px;
+}
+.zt-shetuan-box{
+   display: flex;
+   flex-direction: column;
+   background-color: #ffffff;
+   margin-top: 15px;
+   box-shadow:1px 2px 7px #dddddd;
+   overflow: hidden;
+}
+.zt-image-box{
+   width: 100%;
+   height: 400rpx;
+}
+.zt-image-box image{
+   width: 100%;
+   height: 100%;
+}
+.zt-text-box{
+   padding: 10px 10rpx;
+}
+.zt-text-box view{
+   text-align: center;
+   font-size: 16px;
+}

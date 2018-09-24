@@ -1,0 +1,36 @@
+<view class="page">
+   <view class="page__bd_spacing">
+      <view class='zt-header' bindtap='changeUserInfo' >
+         <image mode='aspectFill' class='zt-user-avatar' src='{{userInfo.avatar_url}}' />
+         <view class='zt-name-box'>
+            <view class='zt-user-nickname'>{{userInfo.nickname}}</view>
+         </view>
+         <view class='zt-change-box'>
+            <image class='zt-change-image' src='../../imgs/icon/write.png'></image>
+            <view class='tip'>点击修改个人信息</view>
+         </view>
+      </view>
+
+      <view class='zt-user-data-container'>
+         <view class='zt-data-item'>
+
+            <view class='zt-data-item-count'>{{myData.postCount}}</view>
+            <view class='zt-data-item-topic'>发布数</view>
+         </view>
+         <view class='zt-data-item'>
+            <view class='zt-data-item-count'>{{myData.likeCount}}</view>
+            <view class='zt-data-item-topic'>获赞数</view>
+         </view>
+         <view class='zt-data-item'>
+
+            <view class='zt-data-item-count'>{{myData.commentCount}}</view>
+            <view class='zt-data-item-topic'>评论数</view>
+         </view>
+      </view>
+      <view class='zt-menu'>
+         <button class='zt-my-post' bindtap='toMyPost'>我的发布</button>
+         <button class='zt-my-comment'>我的评论(暂未开通)</button>
+         <button class='zt-my-collect'>我的收藏(暂未开通)</button>
+      </view>
+   </view>
+</view>

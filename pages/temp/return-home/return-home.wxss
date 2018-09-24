@@ -1,0 +1,20 @@
+.zt-post {
+   display: flex;
+   width: 50px;
+   height: 50px;
+   position: fixed;
+   bottom: 90px;
+   right: 10px;
+   background-color: #a09fed;
+   border-radius: 50%;
+   z-index: 998;
+}
+
+.zt-post view{
+   /* position: absolute;
+   z-index: 999; */
+   font-size: 16px;
+   color: #ffffff;
+   line-height: 50px;
+   margin: auto;
+}

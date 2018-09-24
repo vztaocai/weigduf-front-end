@@ -1,0 +1,52 @@
+@import '../temp/uploader/uploader.wxss';
+
+page {
+   background-color: #f2f2f2;
+   font-size: 16px;
+}
+
+.zt-form-container {
+   padding-top: 20px;
+}
+.section{
+   margin-bottom: 20px;
+}
+.input-section {
+   display: flex;
+   justify-content: center;
+   margin-bottom: 20px;
+}
+
+.zt-radio-box label {
+   margin-right: 20px;
+}
+
+textarea {
+   display: block;
+   height: 100px;
+   width: 100%;
+   padding: 10px;
+   background-color: #fff;
+}
+
+input {
+   height: 30px;
+   padding: 10px;
+   width: 100%;
+   background-color: #fff;
+}
+
+.image-count {
+   position: relative;
+   top: 0;
+   left: 170rpx;
+   color: #999;
+}
+.btn-area{
+   margin-top: 130px;
+}
+.btn-area button {
+   width: 100%;
+   background-color: #a09fed;
+   color: #fff;
+}

@@ -1,0 +1,6 @@
+<template name="post-button">
+   <view class='zt-post' bindtap='onToPost' data-from="{{from}}">
+      <!-- <image src='../../../imgs/icon/post_button.png'></image> -->
+      <view>+</view>
+   </view>
+</template>

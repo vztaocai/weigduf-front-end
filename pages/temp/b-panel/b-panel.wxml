@@ -1,0 +1,63 @@
+<template name="b-panel">
+   <view class='zt-panel page__bd_spacing'>
+      <view class='zt-panel-hd' bindtap='toDetail' data-theme-id='{{data.id}}'>
+         <view class='zt-user-box'>
+            <image wx:if="{{data.isAnonymous}}" src="{{data.user.sex=='女'?'../../imgs/icon/girl.png':'../../imgs/icon/boy.png'}}" class="zt-user-avatar"></image>
+            <image wx:else mode='aspectFill' src='{{data.user.avatar_url}}' class="zt-user-avatar"></image>
+            <view class='zt-name-box'>
+               <view wx:if="{{data.isAnonymous}}" class="zt-user-name">匿名用户</view>
+               <view wx:else class="zt-user-name">{{data.user.nickname}}</view>
+               <view wx:if="{{data.user.title}}" class='zt-user-title'>{{data.user.title}}</view>
+            </view>
+         </view>
+         <view class='zt-user-date'>
+            {{data.create_time}}
+         </view>
+      </view>
+
+      <view class='zt-panel-bd' bindtap='toDetail' data-theme-id='{{data.id}}'>
+      
+         <view class='theme-type' data-theme-type='{{data.type}}' catchtap='toThemeType'>#{{data.type}} </view>
+         <text class='zt-media-text'>{{data.content}}</text>
+      
+         <view class='zt-media-image-box'>
+            <block wx:for="{{data.img}}">
+               <image class='zt-media-image' src='{{item.url}}' mode="aspectFill" catchtap='preImage' data-src="{{item.url}}" data-imgs="{{data.img}}"></image>
+            </block>
+         </view>
+
+      </view>
+
+      <view class='zt-panel-ft'>
+         <view class='zt-panel-handle' bindtap='onClickLike' data-id="{{data.id}}" data-from='{{data.from}}'>
+            <image wx:if="{{data.isLike}}" src='../../imgs/icon/like@selected.png'></image>
+            <image wx:else src='../../imgs/icon/like.png'></image>
+            <view>{{data.like}}</view>
+         </view>
+         <view class='zt-panel-handle' bindtap='toDetail' data-theme-id='{{data.id}}' data-id="{{data.id}}" data-from='{{data.from}}'>
+            <image src='../../imgs/icon/edit.png'></image>
+            <view>{{data.comment_count}}</view>
+         </view>
+         <button open-type='share' class='zt-panel-handle' bindtap='toShare' data-content="{{data.content}}"  data-theme-id='{{data.id}}'>
+            <image src='../../imgs/icon/fenxiang.png'></image>
+            <view>分享</view>
+         </button>
+      </view>
+
+
+      <!-- <view class='zt-comment-box'>
+         <block wx:for="{{data.comments}}">
+            <view class='zt-comment-item' bindtap='onReply' data-to-nickname="{{item.nickname}}" data-to-user-id="{{item.user_id}}" data-id='{{data.id}}' data-from="{{data.from}}">
+               <text class='zt-comment-nickname'>{{item.nickname}}</text>
+               <text wx:if="{{item.to_user_id}}">回复<text class='zt-comment-nickname'>{{item.to_user_nickname}}</text></text>: {{item.comment}}
+            </view>
+         </block>
+      </view> -->
+   </view>
+
+
+
+
+
+
+</template>

@@ -1,0 +1,25 @@
+<view class="page">
+   <view class="page__bd page__bd_spacing">
+    
+      <form  bindsubmit="formSubmit">
+         <view class='zt-form-container'>
+            <view class='section'>
+               <input name="circleName" placeholder='圈子名称'></input>
+            </view>
+            <view class='zt-panel-border'></view>
+            <view class='section'>
+               <textarea name="content" placeholder="描述一下该圈子的用途（至多可输入300个字符）" maxlength="300" />
+            </view>
+            <view class='zt-panel-border'></view>
+            <view class="section">
+               <input name="mobileOrWx" placeholder="输入手机号码或微信号, 方便我们联系你" />
+            </view>
+            
+         </view>
+
+         <view class="btn-area">
+            <button formType="submit" disabled='{{disabled}}'>提交</button>
+         </view>
+      </form>
+   </view>
+</view>

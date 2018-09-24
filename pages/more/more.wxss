@@ -1,0 +1,53 @@
+
+.nav-container{
+   display: flex;
+   flex-direction: column;
+   color: #333333;
+   /* height: 450rpx; */
+   border-radius: 10px;
+   width: 96%;
+   margin: 200px auto;
+   padding: 5px;
+   /* background-image: url('https://weischool.oss-cn-shenzhen.aliyuncs.com/background/timg.jpg'); */
+   /* background-size: 100% 100%; */
+}
+
+.nav-row{
+   display: flex;
+   height: 150rpx;
+}
+.nav-item,navigator{
+   display: flex;
+   flex-direction: column;
+   width: 25%;
+   justify-content: center;
+   align-content: center;
+   /* background-color: #a09fed; */
+   
+}
+navigator image{
+   width: 40px;
+   height: 40px;
+   margin: 0 auto;
+}
+.nav-item image{
+   width: 40px;
+   height: 40px;
+   margin: 0 auto;
+   
+}
+.nav-item view{
+   color: #333;
+   font-size: 30rpx;
+   margin: 5px auto 0;
+}
+navigator view{
+   color: #333;
+   font-size: 30rpx;
+   margin: 5px auto 0;
+}
+.tip{
+   font-size: 12px;
+   margin: 30px auto;
+   color: #999;
+}

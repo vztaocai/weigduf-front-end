@@ -1,0 +1,25 @@
+<view class="page">
+   <view class="page__bd">
+   <view class='zt-top-container'>
+      <image src='../../../imgs/icon/what.png'></image>
+      <view>在这里,认识志同道合的人</view>
+      <image src='../../../imgs/icon/add.png' bindtap='toPost'></image>
+   </view>
+
+   <view class='zt-main'>
+      <view class='zt-circle-item'  style='height:160px;'>
+         <view>18级新生</view>
+      </view>
+      <view class='zt-circle-item' style='background-color: #F3E591;'>
+         <view>考研大军</view>
+      </view>
+      <view class='zt-circle-item' style='background-color: #A8EDCF;'>
+         <view>一起拼车</view>
+      </view>
+   </view>
+
+      <view class="page__bd_spacing">
+
+      </view>
+   </view>
+</view>

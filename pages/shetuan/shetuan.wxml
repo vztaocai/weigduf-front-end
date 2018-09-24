@@ -1,0 +1,24 @@
+
+   <view class="page__bd">
+      <view class="page__bd_spacing">
+
+         <view class='zt-shetuan-box' bindtap='toButtonGroup'>
+            <view class='zt-image-box'>
+               <image mode='aspectFit' src="https://weischool.oss-cn-shenzhen.aliyuncs.com/%E7%A4%BE%E5%9B%A2/%E6%A0%A1%E7%A4%BE%E8%81%94logo.jpg" data-src="{{item.image_url}}" ></image>
+            </view>
+            <view class='zt-text-box'>
+               <view>广金校社联旗下社团</view>
+            </view>
+         </view>
+         <block wx:for="{{shetuanData}}">
+            <view class='zt-shetuan-box' bindtap='toArticle'  data-id="{{item.id}}">
+               <view class='zt-image-box'>
+                  <image mode='aspectFit' src='{{item.head_img}}'></image>
+               </view>
+               <view class='zt-text-box'>
+                  <view>{{item.source}}</view>
+               </view>
+            </view>
+         </block>
+      </view>
+   </view>

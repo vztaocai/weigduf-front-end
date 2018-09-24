@@ -1,0 +1,28 @@
+<view class='nav-container'>
+   <view class='nav-row'>
+
+      <view class='nav-item' data-from="shiwu" bindtap='onToPage'>
+         <image src='../../imgs/icon/shiwu.png'></image>
+         <view>失物招领</view>
+      </view>
+
+      <view class='nav-item' data-from="book" bindtap='onToPage'>
+         <image src='../../imgs/icon/book.png'></image>
+         <view>图书馆</view>
+      </view>
+
+      <view class='nav-item' data-from="tice" bindtap='onToPage'>
+         <image src='../../imgs/icon/tice.png'></image>
+         <view>体测成绩</view>
+      </view>
+      
+      <view class='nav-item' data-from="advice" bindtap='onToPage'>
+         <image src='../../imgs/icon/fankui.png'></image>
+         <view>建议反馈</view>
+      </view>
+   </view>
+
+   <view class='nav-row'>
+      <view class='tip'>更多功能，敬请期待...</view>
+   </view>
+</view>

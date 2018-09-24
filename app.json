@@ -1,0 +1,57 @@
+{
+   "pages": [
+      "pages/home/home",
+      "pages/shiwu/shiwu",
+      "pages/temp/navbar/navbar",
+      "pages/post/post",
+      "pages/login/login",
+      "pages/biaobai/biaobai",
+      "pages/ershou/ershou",
+      "pages/shetuan/shetuan",
+      "pages/shetuan/button-group/button-group",
+      "pages/shetuan/article/article",
+      "pages/notice/notice",
+      "pages/circle/home/home",
+      "pages/circle/article-list/article-list",
+      "pages/circle/home/post/post",
+      "pages/chat/chat",
+      "pages/my/my",
+      "pages/my/mypost/mypost",
+      "pages/theme-detail/theme-detail",
+      "pages/my/change/change",
+      "pages/jump/jump",
+      "pages/more/more"
+   ],
+   "window": {
+      "navigationBarTitleText": "",
+      "navigationBarBackgroundColor": "#ffffff",
+      "navigationBarTextStyle": "black",
+      "backgroundColor": "#eeeeee",
+      "backgroundTextStyle": "light"
+   },
+   "tabBar": {
+      "list": [
+         {
+            "pagePath": "pages/home/home",
+            "text": "首页",
+            "iconPath": "imgs/toolbar/home.png",
+            "selectedIconPath": "imgs/toolbar/home@selected.png"
+         },
+         {
+            "pagePath": "pages/chat/chat",
+            "text": "课间说",
+            "iconPath": "imgs/toolbar/chat.png",
+            "selectedIconPath": "imgs/toolbar/chat@selected.png"
+         },
+         {
+            "pagePath": "pages/my/my",
+            "text": "我的",
+            "iconPath": "imgs/toolbar/my.png",
+            "selectedIconPath": "imgs/toolbar/my@selected.png"
+         }
+      ],
+      "borderStyle": "white",
+      "color": "#989898",
+      "selectedColor": "#a09fed"
+   }
+}

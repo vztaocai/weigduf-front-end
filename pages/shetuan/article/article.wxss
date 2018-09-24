@@ -1,0 +1,10 @@
+.zt-main{
+   margin-top: 10px;
+}
+.zt-header{
+   font-size: 16px;
+   margin: 10px 0;
+}
+.zt-main image{
+   width: 100%;
+}

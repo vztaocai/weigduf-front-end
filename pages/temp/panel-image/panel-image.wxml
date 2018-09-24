@@ -1,0 +1,41 @@
+<view class='zt-panel'>
+   <view class='zt-panel-hd'>
+      <view class='zt-user-box'>
+         <open-data type="userAvatarUrl" class="zt-user-avatar"></open-data>
+         <view class='zt-name-box'>
+            <open-data type="userNickName" class="zt-user-name"></open-data>
+            <view class='zt-user-title'>招就处技术部</view>
+         </view>
+      </view>
+      <view class='zt-user-date'>
+         2018-12-09 18:22
+      </view>
+   </view>
+
+   <view class='zt-panel-bd'>
+      <view class='zt-media-text'>的点点滴滴多多多多多多多多多少时诵诗书所所所所所所所所所少时诵诗书所所所所所所所所所宿舍哀死事生少时诵诗书</view>
+
+      <view class='zt-media-image-box'>
+         <image class='zt-media-image' src='../../images/banner-1a.png' mode="aspectFit"></image>
+         <image class='zt-media-image' src='../../images/erweima/weixin.png' mode="aspectFit"></image>
+         <image class='zt-media-image' src='../../images/erweima/weixin.png' mode="aspectFit"></image>
+      </view>
+
+   </view>
+
+   <view class='zt-panel-ft'>
+      <view class='zt-panel-handle'>
+         <image src='../../imgs/icon/like.png'></image>
+         <view>12</view>
+      </view>
+      <view class='zt-panel-handle'>
+         <image src='../../imgs/icon/pinglun.png'></image>
+         <view>12</view>
+      </view>
+      <view class='zt-panel-handle'>
+         <image src='../../imgs/icon/fenxiang.png'></image>
+         <view>12</view>
+      </view>
+   </view>
+   
+</view>

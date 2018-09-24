@@ -1,0 +1,76 @@
+<import src="../temp/b-panel/b-panel.wxml" />
+<view class='page'>
+
+   <view class='container'>
+      <swiper indicator-dots='true' autoplay='true' class='swiper'>
+         <block wx:for="{{bannerData}}">
+            <swiper-item class='swiper-item' data-url="{{item.url}}" bindtap="toBanner">
+               <image src='{{item.img_url}}' class='item-image' mode='aspectFill'></image>
+            </swiper-item>
+         </block>
+      </swiper>
+
+      <scroll-view scroll-x="true" class='nav-container'>
+         <view class='nav-row' >
+
+            <navigator app-id="wx727c333bd1be4217" target="miniProgram" open-type="navigate" version="release">
+               <image src='../../imgs/icon/shop2.png'></image>
+               <view>WEI SHOP</view>
+            </navigator>
+
+            <view class='nav-item' data-from='jiaowu' bindtap='onToPage'>
+               <image src='../../imgs/icon/jiaowu.png'></image>
+               <view>教务系统</view>
+            </view>
+
+            <view class='nav-item' data-from="notice" bindtap='onToPage'>
+               <image src='../../imgs/icon/gonggao.png'></image>
+               <view>校内通知</view>
+            </view>
+
+            <navigator app-id="wx38026ccc1ccbee54" target="miniProgram" open-type="navigate" version="release">
+               <image src='../../imgs/icon/fanka.png'></image>
+               <view>电费查询</view>
+            </navigator>
+
+            
+         </view>
+
+         <view class='nav-row'>
+            <view class='nav-item' data-from="shetuan" bindtap='onToPage'>
+               <image src='../../imgs/icon/shetuan.png'></image>
+               <view>社团组织</view>
+            </view>
+            <view class='nav-item' data-from="biaobai" bindtap='onToPage'>
+               <image src='../../imgs/icon/biaobai.png'></image>
+               <view>表白墙</view>
+            </view>
+            <view class='nav-item' data-from="ershou" bindtap='onToPage'>
+               <image src='../../imgs/icon/ershou.png'></image>
+               <view>闲置交易</view>
+            </view>
+            <view class='nav-item' data-from="more" bindtap='onToPage'>
+               <image src='../../imgs/icon/more.png'></image>
+               <view>更多功能</view>
+            </view>
+         </view>
+      </scroll-view>
+
+
+      <view class='zt-news-container  page__bd'>
+         <view class='zt-news-topic'>新鲜事</view>
+         <block wx:for="{{recentTheme}}">
+            <template is="b-panel" data="{{data:item,index:index}}" />
+            <view wx:if="{{item.commenting == true}}">
+               <form bindsubmit="formSubmit" data-id="{{item.id}}" data-from="{{item.from}}" data-index="{{index}}">
+                  <view class='zt-commenting-box'>
+                     <input name="comment" focus="true" placeholder="{{replyData?'@'+replyData.toNickname:'评论'}}" bindblur="closeCommenting" data-from="{{item.from}}" data-id="{{item.id}}" />
+                     <button class='zt-commenting-button' formType="submit">发表</button>
+                  </view>
+               </form>
+            </view>
+         </block>
+         <view wx:if="{{nomore}}" class='nomore'>Top 20 END</view>
+      </view>
+   </view>
+</view>

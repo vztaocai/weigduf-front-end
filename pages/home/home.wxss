@@ -1,0 +1,111 @@
+@import  '../temp/b-panel/b-panel.wxss';
+.swiper{
+   display: flex;
+   width: 100%;
+   height: 350rpx;
+   justify-content: center;
+   align-content: center;
+   /* box-sizing: border-box; */
+   /* border: 10rpx solid #f0f0f4; */
+   margin-bottom: 5px;
+}
+.swiper-item image{
+   width: 100%;
+   height: 100%;
+}
+
+
+.nav-container{
+   display: flex;
+   flex-direction: column;
+   color: #333333;
+   height: 310rpx;
+   border-radius: 10px;
+   /* width: 96%; */
+   white-space: nowrap; 
+   margin: 0 auto;
+   padding: 5px;
+   background-color: #fff;
+   /* background-image: url('https://weischool.oss-cn-shenzhen.aliyuncs.com/background/timg.jpg'); */
+   /* background-size: 100% 100%; */
+}
+
+.nav-row{
+   display: flex;
+   height: 150rpx;
+   /* display: inline-block; */
+   /* width: 150%; */
+}
+.nav-item,navigator{
+   display: flex;
+   flex-direction: column;
+   width: 25%;
+   justify-content: center;
+   align-content: center;
+   /* background-color: #a09fed; */
+   
+}
+navigator image{
+   width: 40px;
+   height: 40px;
+   margin: 0 auto;
+}
+.nav-item image{
+   width: 40px;
+   height: 40px;
+   margin: 0 auto;
+   
+}
+.nav-item view{
+   color: #333;
+   font-size: 30rpx;
+   margin: 5px auto 0;
+}
+navigator view{
+   color: #333;
+   font-size: 30rpx;
+   margin: 5px auto 0;
+}
+
+.zt-news-topic{
+   padding: 10px 0;
+   font-size: 18px;
+   color:  #a09fed;
+   background-color: #fff;
+   text-align: center;
+}
+
+
+
+
+.zt-commenting-box{
+   display: flex;
+   justify-content: center;
+   height: 50px;
+}
+input{
+   border-bottom: 2px solid #a09fed;
+   width: 600rpx;
+   height: 30px;
+   margin: auto 0;
+   text-align: left;
+}
+.zt-commenting-button{
+   width: 100rpx;
+   height: 32px;
+   line-height: 30px;
+   border-radius: 2px;
+   padding: 0;
+   font-size: 16px;
+   margin: auto 0;
+   background-color: #a09fed;
+   color: #ffffff;
+}
+button[class="zt-commenting-button"]::after {
+  border: 0;
+} 
+.nomore{
+   margin-top: 20px;
+   text-align: center;
+   color: #989898;
+}

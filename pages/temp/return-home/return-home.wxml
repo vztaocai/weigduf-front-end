@@ -1,0 +1,7 @@
+<template name="return-home">
+   <view class='zt-post' bindtap='returnHome'>
+      <!-- <image src='../../../imgs/icon/home.png'></image> -->
+      <view>首页</view>
+      <!-- <view>+</view> -->
+   </view>
+</template>

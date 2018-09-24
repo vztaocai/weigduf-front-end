@@ -1,0 +1,30 @@
+<view class="page">
+   <view class=" page__bd_spacing">
+      <form bindsubmit="formSubmit">
+         <view class='zt-form-container'>
+            <view class='section'>
+               <input name="nickname" auto-focus='true' value="{{nickname}}" maxlength="10" />
+            </view>
+            <!-- <view class='zt-panel-border'></view> -->
+            
+            <view class='section'>
+               <view class="weui-uploader__files">
+                  <block wx:for="{{files}}" wx:key="*this">
+                     <view class="weui-uploader__file" bindlongpress="deleteImage" bindtap="previewImage" data-index="{{index}}" id="{{item}}">
+                        <image class="weui-uploader__img" src="{{item}}" mode="aspectFill" />
+                     </view>
+                  </block>
+               </view>
+               
+               <view  wx:if="{{imageCount<maxImageCount}}"  class="weui-uploader__input-box">
+                  <view class="weui-uploader__input" bindtap="chooseImage"></view>
+               </view>
+            </view>
+         </view>
+
+         <view class="btn-area">
+            <button formType="submit" disabled='{{disabled}}'>立即修改</button>
+         </view>
+      </form>
+   </view>
+</view>

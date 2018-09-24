@@ -1,0 +1,75 @@
+.zt-header {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+}
+
+.zt-user-avatar {
+   width: 100px;
+   height: 100px;
+   margin: 30px auto 0;
+   border-radius: 50%;
+   display: block;
+   overflow: hidden;
+}
+.zt-name-box{
+   display: flex;
+   margin: 15px auto 0;
+   padding-left: 10px;
+}
+.zt-change-box{
+   display: flex;
+   margin: 5px auto;
+}
+.zt-change-image{
+   width: 20px;
+   height: 20px;
+}
+.zt-user-nickname {
+   font-size: 16px;
+}
+
+.zt-user-data-container {
+   display: flex;
+   justify-content: space-around;
+}
+
+.zt-data-item {
+}
+
+.zt-data-item .zt-data-item-topic {
+   font-size: 12px;
+}
+
+.zt-data-item .zt-data-item-count {
+   font-size: 24px;
+   text-align: center;
+   color: #a09fed;
+}
+
+.zt-menu button {
+   border-radius: 100px;
+   color: #fff;
+   margin: 20px 0;
+}
+button::after {
+   border: none;
+}
+.zt-my-post {
+   background-color: #aedeff;
+}
+.zt-my-comment {
+   background-color: #F3E591;
+}
+.zt-my-collect {
+   background-color: #A8EDCF;
+}
+.zt-my-setting {
+   background-color: #FFB9DA;
+}
+
+.tip{
+   color: #999;
+   font-size: 12px;
+   line-height: 20px;
+}

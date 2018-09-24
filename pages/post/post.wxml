@@ -1,0 +1,190 @@
+<!-- <view class="page"> -->
+<view class=" page__bd_spacing">
+   <!-- 失物招领块 -->
+   <form wx:if="{{from == 'shiwu'}}" bindsubmit="formSubmit" report-submit="true">
+      <view class='zt-form-container'>
+         <view class='section'>
+            <radio-group name="from" class="zt-radio-box">
+               <label>
+                  <radio value="shiwu" color="#a09fed" />失物招领</label>
+               <label>
+                  <radio value="xunwu" color="#a09fed" />寻物启事</label>
+            </radio-group>
+         </view>
+         <!-- <view class='zt-panel-border'></view> -->
+         <view class='input-section'>
+            <textarea name="content" placeholder="描述一下该物品的外观、拾到/丢失地点、时间等（至多可输入300个字符）" maxlength="300" />
+         </view>
+         <!-- <view class='zt-panel-border'></view> -->
+         <view class="section">
+            <switch color="#a09fed" bindchange="switchChange" />匿名
+         </view>
+         <view class='section'>
+            <view class="weui-uploader__files">
+               <block wx:for="{{files}}" wx:key="*this">
+                  <view class="weui-uploader__file" bindlongpress="deleteImage" bindtap="previewImage" data-index="{{index}}" id="{{item}}">
+                     <image class="weui-uploader__img" src="{{item}}" mode="aspectFill" />
+                  </view>
+               </block>
+            </view>
+            <view wx:if="{{imageCount<maxImageCount}}" class="weui-uploader__input-box">
+               <view class="weui-uploader__input" bindtap="chooseImage"></view>
+               <view class='image-count'>{{imageCount}}/{{maxImageCount}}</view>
+            </view>
+         </view>
+
+      </view>
+
+      <view class="btn-area">
+         <button formType="submit" disabled='{{disabled}}'>发布</button>
+      </view>
+   </form>
+   <!-- 表白墙块 -->
+   <form wx:if="{{from == 'biaobai'}}" bindsubmit="formSubmit" report-submit="true">
+      <view class='zt-form-container'>
+         <view class='input-section'>
+            <textarea name="content" placeholder="输入表白对象，表白内容等（至多可输入200个字符）" maxlength="200" />
+         </view>
+         <!-- <view class='zt-panel-border'></view> -->
+         <view class='section'>
+            <view class="weui-uploader__files">
+               <block wx:for="{{files}}" wx:key="*this">
+                  <view class="weui-uploader__file" bindlongpress="deleteImage" bindtap="previewImage" data-index="{{index}}" id="{{item}}">
+                     <image class="weui-uploader__img" src="{{item}}" mode="aspectFill" />
+                  </view>
+               </block>
+            </view>
+            <view wx:if="{{imageCount<maxImageCount}}" class="weui-uploader__input-box">
+               <view class="weui-uploader__input" bindtap="chooseImage"></view>
+               <view class='image-count'>{{imageCount}}/{{maxImageCount}}</view>
+            </view>
+         </view>
+      </view>
+
+      <view class="btn-area">
+         <button formType="submit" disabled='{{disabled}}'>发布</button>
+      </view>
+   </form>
+   <!-- 闲置交易 -->
+   <form wx:if="{{from == 'ershou'}}" bindsubmit="formSubmit" report-submit="true">
+      <view class='zt-form-container'>
+         <view class='section'>
+            <radio-group name="from" class="zt-radio-box">
+               <label>
+                  <radio value="sale" color="#a09fed" />我要出售</label>
+               <label>
+                  <radio value="buy" color="#a09fed" />我要求购</label>
+            </radio-group>
+         </view>
+         <!-- <view class='zt-panel-border'></view> -->
+         <view class='input-section'>
+            <textarea name="content" placeholder="输入物品名称/价格等，越详细可以提高出售/购买成功率哦(至多输入300个字符)" maxlength="300" />
+         </view>
+         <!-- <view class='zt-panel-border'></view> -->
+         <view class="section">
+            <switch color="#a09fed" bindchange="switchChange" />匿名
+         </view>
+         <view class='section'>
+            <view class="weui-uploader__files">
+               <block wx:for="{{files}}" wx:key="*this">
+                  <view class="weui-uploader__file" bindlongpress="deleteImage" bindtap="previewImage" data-index="{{index}}" id="{{item}}">
+                     <image class="weui-uploader__img" src="{{item}}" mode="aspectFill" />
+                  </view>
+               </block>
+            </view>
+            <view wx:if="{{imageCount<maxImageCount}}" class="weui-uploader__input-box">
+               <view class="weui-uploader__input" bindtap="chooseImage"></view>
+               <view class='image-count'>{{imageCount}}/{{maxImageCount}}</view>
+            </view>
+         </view>
+      </view>
+
+      <view class="btn-area">
+         <button formType="submit" disabled='{{disabled}}'>发布</button>
+      </view>
+   </form>
+   <!-- 通知发布块 -->
+   <form wx:if="{{from == 'notice'}}" bindsubmit="formSubmit" report-submit="true">
+      <view class='zt-form-container'>
+         <view class='input-section'>
+            <textarea name="content" placeholder="通知内容" maxlength="500" />
+         </view>
+         <!-- <view class='zt-panel-border'></view> -->
+         <view class='section'>
+            <view class="weui-uploader__files">
+               <block wx:for="{{files}}" wx:key="*this">
+                  <view class="weui-uploader__file" bindlongpress="deleteImage" bindtap="previewImage" data-index="{{index}}" id="{{item}}">
+                     <image class="weui-uploader__img" src="{{item}}" mode="aspectFill" />
+                  </view>
+               </block>
+            </view>
+            <view wx:if="{{imageCount<maxImageCount}}" class="weui-uploader__input-box">
+               <view class="weui-uploader__input" bindtap="chooseImage"></view>
+               <view class='image-count'>{{imageCount}}/{{maxImageCount}}</view>
+            </view>
+         </view>
+      </view>
+
+      <view class="btn-area">
+         <button formType="submit" disabled='{{disabled}}'>发布</button>
+      </view>
+   </form>
+   <!-- 下课闲聊 -->
+   <form wx:if="{{from == 'chat'}}" bindsubmit="formSubmit" report-submit="true">
+      <view class='zt-form-container'>
+         <view class='input-section'>
+            <textarea name="content" placeholder="输入内容(300字符以内)" maxlength="300" />
+         </view>
+         <!-- <view class='zt-panel-border'></view> -->
+         <view class="section">
+            <switch color="#a09fed" bindchange="switchChange" />匿名
+         </view>
+         <view class='section'>
+            <view class="weui-uploader__files">
+               <block wx:for="{{files}}" wx:key="*this">
+                  <view class="weui-uploader__file" bindlongpress="deleteImage" bindtap="previewImage" data-index="{{index}}" id="{{item}}">
+                     <image class="weui-uploader__img" src="{{item}}" mode="aspectFill" />
+                  </view>
+               </block>
+            </view>
+            <view wx:if="{{imageCount<maxImageCount}}" class="weui-uploader__input-box">
+               <view class="weui-uploader__input" bindtap="chooseImage"></view>
+               <view class='image-count'>{{imageCount}}/{{maxImageCount}}</view>
+            </view>
+         </view>
+      </view>
+
+      <view class="btn-area">
+         <button formType="submit" disabled='{{disabled}}'>发布</button>
+      </view>
+   </form>
+   <!--建议发布块 -->
+   <form wx:if="{{from == 'advice'}}" bindsubmit="formSubmit" report-submit="true">
+      <view class='zt-form-container'>
+         <view class='input-section'>
+            <textarea name="content" placeholder="我们会不断为你改进" maxlength="500" />
+         </view>
+
+         <view class='input-section'>
+            <input name="mobile" placeholder="微信号(选填)" />
+         </view>
+
+         <view class="weui-uploader__files">
+            <block wx:for="{{files}}" wx:key="*this">
+               <view class="weui-uploader__file" bindlongpress="deleteImage" bindtap="previewImage" data-index="{{index}}" id="{{item}}">
+                  <image class="weui-uploader__img" src="{{item}}" mode="aspectFill" />
+               </view>
+            </block>
+         </view>
+         <view wx:if="{{imageCount<maxImageCount}}" class="weui-uploader__input-box">
+            <view class="weui-uploader__input" bindtap="chooseImage"></view>
+            <view class='image-count'>{{imageCount}}/{{maxImageCount}}(选填)</view>
+         </view>
+      </view>
+
+      <view class="btn-area">
+         <button formType="submit" disabled='{{disabled}}'>提交</button>
+      </view>
+   </form>
+</view>
+<!-- </view> -->

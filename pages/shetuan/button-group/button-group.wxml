@@ -1,0 +1,9 @@
+<view class="page">
+      <view class="page__bd_spacing">
+         <button bindtap='toArticle' data-id='1'>学术科技类</button>
+         <button bindtap='toArticle' data-id='2'>体育健身类</button>
+         <button bindtap='toArticle' data-id='3'>综合实践类</button>
+         <button bindtap='toArticle' data-id='4'>文娱文化类</button>
+     
+   </view>
+</view>

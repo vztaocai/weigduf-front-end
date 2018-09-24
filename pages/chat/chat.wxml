@@ -1,0 +1,24 @@
+<import src="../temp/a-panel/a-panel.wxml" />
+<import src="../temp/post-button/post-button.wxml" />
+
+
+   <view class="page">
+      <view class="page__bd">
+
+         <block wx:for="{{chatData}}">
+            <template is="a-panel" data="{{data:item,index:index}}" />
+            <!-- 弹出评论 -->
+            <view wx:if="{{item.commenting == true}}">
+               <form bindsubmit="formSubmit" data-id="{{item.id}}" data-from="{{item.from}}" data-index="{{index}}">
+                  <view class='zt-commenting-box'>
+                     <input name="comment" focus="true" placeholder="{{replyData?'@'+replyData.toNickname:'在此输入评论'}}" bindblur="closeCommenting" data-from="{{item.from}}" data-id="{{item.id}}" />
+                     <button class='zt-commenting-button' formType="submit">评论</button>
+                  </view>
+               </form>
+            </view>
+         </block>
+         <view  class='nomore'>{{nomore?'没有更多内容啦':'上拉加载更多'}}</view>
+         <template is="post-button" data="{{currentPage}}" />
+
+      </view>
+   </view>

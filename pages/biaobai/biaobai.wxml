@@ -1,0 +1,18 @@
+<import src="../temp/post-button/post-button.wxml" />
+
+<view class="page">
+   <view class="page__bd_spacing page__bd">
+      <block wx:for="{{biaobaiList}}">
+         <view class='zt-biaobai-box'>
+            <view class='zt-image-box'>
+               <image mode='aspectFill' src='{{item.img[0].url}}' data-src="{{item.img[0].url}}}" bindtap='preImage'></image>
+            </view>
+            <view class='zt-text-box'>
+               <text>{{item.content}}</text>
+            </view>
+         </view>
+      </block>
+      <view  class='nomore'>{{nomore?'没有更多内容啦':'上拉加载更多'}}</view>
+      <template is="post-button" data="{{currentPage}}" />
+   </view>
+</view>

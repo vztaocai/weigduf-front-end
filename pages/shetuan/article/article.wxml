@@ -1,0 +1,10 @@
+<view class="page">
+   <view class="page__bd_spacing">
+      <view class='zt-main'>
+         <view class='zt-header'>文章转自{{article.source}}</view>
+         <image mode="widthFix" src="{{article.main_img}}"></image>
+      </view>
+      
+   </view>
+</view>
+<!-- <web-view src="https://www.aocxiaonei.com/wei/public/index.php/admin/index/index.html"></web-view> -->
